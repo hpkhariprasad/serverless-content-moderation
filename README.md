@@ -134,6 +134,100 @@ aws logs tail /aws/lambda/FileModerationLambda --follow
 You can place these test files in a local `samples/` folder and upload them to your bucket for validation.
 
 ---
+## 📑 Sample Moderation Results
+
+### 1. Safe Content
+```json
+{
+  "Bucket": "content-moderation-uploads",
+  "Key": "uploads/clean_text.txt",
+  "ContentType": "text/plain",
+  "Language": "en",
+  "ImageLabels": null,
+  "Pii": [],
+  "Note": null,
+  "Sentiment": "POSITIVE",
+  "SentimentScores": {
+    "Mixed": 7.6231234E-05,
+    "Negative": 0.00024984582,
+    "Neutral": 0.029916722,
+    "Positive": 0.96975726
+  }
+}
+```
+### 2. PII Content
+
+```json
+{
+  "Bucket": "content-moderation-uploads-198852397196",
+  "Key": "uploads/pii_text.txt",
+  "ContentType": "text/plain",
+  "Language": "en",
+  "ImageLabels": null,
+  "Pii": [
+    {
+      "Type": "NAME",
+      "Score": 0.99989533
+    },
+    {
+      "Type": "EMAIL",
+      "Score": 0.9999112
+    },
+    {
+      "Type": "PHONE",
+      "Score": 0.9999054
+    },
+    {
+      "Type": "CREDIT_DEBIT_NUMBER",
+      "Score": 0.9999599
+    }
+  ],
+  "Note": null,
+  "Sentiment": "NEUTRAL",
+  "SentimentScores": {
+    "Mixed": 2.1122312E-06,
+    "Negative": 5.1479095E-05,
+    "Neutral": 0.9997993,
+    "Positive": 0.00014709852
+  }
+}
+```
+### 3. Inappropriate Image
+
+```json
+{
+  "Bucket": "content-moderation-uploads",
+  "Key": "uploads/tumblr_80.jpg",
+  "ContentType": "image/jpeg",
+  "Language": null,
+  "ImageLabels": [
+    {
+      "Name": "Swimwear or Underwear",
+      "Confidence": 94.6311
+    },
+    {
+      "Name": "Female Swimwear or Underwear",
+      "Confidence": 94.6311
+    },
+    {
+      "Name": "Non-Explicit Nudity of Intimate parts and Kissing",
+      "Confidence": 91.4775
+    },
+    {
+      "Name": "Non-Explicit Nudity",
+      "Confidence": 91.4775
+    },
+    {
+      "Name": "Partially Exposed Female Breast",
+      "Confidence": 91.4775
+    }
+  ],
+  "Pii": null,
+  "Note": null,
+  "Sentiment": null,
+  "SentimentScores": null
+}
+```
 
 ## 🧹 Cleanup
 
