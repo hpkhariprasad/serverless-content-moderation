@@ -159,7 +159,7 @@ You can place these test files in a local `samples/` folder and upload them to y
 
 ```json
 {
-  "Bucket": "content-moderation-uploads-198852397196",
+  "Bucket": "content-moderation-uploads",
   "Key": "uploads/pii_text.txt",
   "ContentType": "text/plain",
   "Language": "en",
