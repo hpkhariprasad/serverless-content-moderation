@@ -1,0 +1,15 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Packages
+/package/*.zip
+
+# IDE
+.vscode/
+*.user
+bin/
+obj/
+.vs/
