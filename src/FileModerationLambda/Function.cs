@@ -39,7 +39,7 @@ public class Function
 
             // Fetch metadata
             var head = await _s3.GetObjectMetadataAsync(_bucket, key);
-            var contentType = head.Headers.ContentType ?? "";
+            var contentType = head.Headers["Content-Type"] ?? "";
             var ext = Path.GetExtension(key).ToLowerInvariant();
 
             var result = new ModerationResult
