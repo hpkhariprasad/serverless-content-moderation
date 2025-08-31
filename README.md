@@ -216,10 +216,6 @@ You can place these test files in a local `samples/` folder and upload them to y
     {
       "Name": "Non-Explicit Nudity",
       "Confidence": 91.4775
-    },
-    {
-      "Name": "Partially Exposed Female Breast",
-      "Confidence": 91.4775
     }
   ],
   "Pii": null,
