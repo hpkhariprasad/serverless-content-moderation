@@ -1,11 +1,12 @@
 resource "aws_lambda_function" "moderator" {
   function_name = var.lambda_function_name
   role          = aws_iam_role.moderator_role.arn
-  handler       = "LambdaModeration::LambdaModeration.Function::FunctionHandler"
+  handler       = "FileModerationLambda::LambdaModeration.Function::FunctionHandler"
+
   runtime       = "dotnet8"
 
-  filename         = "../package/moderator.zip"              # <- place zip here
-  source_code_hash = filebase64sha256("../package/moderator.zip")
+  filename         = "../package/FileModerationLambda.zip"              # <- place zip here
+  source_code_hash = filebase64sha256("../package/FileModerationLambda.zip")
 
   memory_size = var.lambda_memory_mb
   timeout     = var.lambda_timeout_seconds
