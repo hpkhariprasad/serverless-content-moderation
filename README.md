@@ -55,7 +55,7 @@ It automatically scans uploaded files (text & images) in S3 and decides whether 
  │  S3 Bucket        │              │  S3 Bucket        │
  │  (approved/)      │              │  (quarantine/)    │
  └───────────────────┘              └───────────────────┘
-
+```
 
 ## ⚙️ Deployment
 
