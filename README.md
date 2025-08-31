@@ -116,17 +116,7 @@ To destroy resources:
 terraform destroy -auto-approve
 ```
 
----
-
-## 📜 License
-
-MIT License – free to use & modify.
-
----
-
 ## 🙌 Contributing
 
 Pull requests are welcome! Please open an issue for feature requests or bug reports.
 
-
-```
