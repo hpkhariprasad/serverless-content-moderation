@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./src/YourProject
+        working-directory: ./src/FileModerationLambda
 
     steps:
     - uses: actions/checkout@v4
